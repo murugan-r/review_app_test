@@ -1,0 +1,1 @@
+{"name":"review app test","repository":"https://github.com/murugan-r/review_app_test","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true},"HEROKU_APP_NAME":{"required":true},"HEROKU_PARENT_APP_NAME":{"required":true}},"formation":{"web":{"quantity":1}}}
