@@ -26,3 +26,293 @@
     </div>
   </div>
 </div>
+
+<!-- A User has many posted_photos -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Posted_photos
+      </li>
+
+      <% @user.posted_photos.each do |photo| %>
+        <li class="list-group-item">
+          <a href="/photos/<%= photo.id %>">
+            <%= photo.created_at %>
+          </a>
+          <a href="/photos/<%= photo.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_photo/<%= photo.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many sent_friend_requests -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Sent_friend_requests
+      </li>
+
+      <% @user.sent_friend_requests.each do |friend_request| %>
+        <li class="list-group-item">
+          <a href="/friend_requests/<%= friend_request.id %>">
+            <%= friend_request.created_at %>
+          </a>
+          <a href="/friend_requests/<%= friend_request.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/friend_requests/<%= friend_request.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_friend_request/<%= friend_request.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many received_friend_requests -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Received_friend_requests
+      </li>
+
+      <% @user.received_friend_requests.each do |friend_request| %>
+        <li class="list-group-item">
+          <a href="/friend_requests/<%= friend_request.id %>">
+            <%= friend_request.created_at %>
+          </a>
+          <a href="/friend_requests/<%= friend_request.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/friend_requests/<%= friend_request.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_friend_request/<%= friend_request.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many likes -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Likes
+      </li>
+
+      <% @user.likes.each do |vote| %>
+        <li class="list-group-item">
+          <a href="/votes/<%= vote.id %>">
+            <%= vote.created_at %>
+          </a>
+          <a href="/votes/<%= vote.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/votes/<%= vote.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_vote/<%= vote.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many comments -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Comments
+      </li>
+
+      <% @user.comments.each do |comment| %>
+        <li class="list-group-item">
+          <a href="/comments/<%= comment.id %>">
+            <%= comment.created_at %>
+          </a>
+          <a href="/comments/<%= comment.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_comment/<%= comment.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many follows -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Follows
+      </li>
+
+      <% @user.follows.each do |user| %>
+        <li class="list-group-item">
+          <a href="/users/<%= user.id %>">
+            <%= user.username %>
+          </a>
+          <a href="/users/<%= user.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/users/<%= user.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_user/<%= user.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many followers -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Followers
+      </li>
+
+      <% @user.followers.each do |user| %>
+        <li class="list-group-item">
+          <a href="/users/<%= user.id %>">
+            <%= user.username %>
+          </a>
+          <a href="/users/<%= user.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/users/<%= user.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_user/<%= user.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many liked_photos -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Liked_photos
+      </li>
+
+      <% @user.liked_photos.each do |photo| %>
+        <li class="list-group-item">
+          <a href="/photos/<%= photo.id %>">
+            <%= photo.created_at %>
+          </a>
+          <a href="/photos/<%= photo.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_photo/<%= photo.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many timeline -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Timeline
+      </li>
+
+      <% @user.timeline.each do |photo| %>
+        <li class="list-group-item">
+          <a href="/photos/<%= photo.id %>">
+            <%= photo.created_at %>
+          </a>
+          <a href="/photos/<%= photo.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_photo/<%= photo.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many commented_photos -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Commented_photos
+      </li>
+
+      <% @user.commented_photos.each do |photo| %>
+        <li class="list-group-item">
+          <a href="/photos/<%= photo.id %>">
+            <%= photo.created_at %>
+          </a>
+          <a href="/photos/<%= photo.id %>" class="btn btn-primary">
+            Show
+          </a>
+          <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">
+            Edit
+          </a>
+          <a href="/delete_photo/<%= photo.id %>" class="btn btn-danger" rel="nofollow">
+            Delete
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
